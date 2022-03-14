@@ -1,0 +1,1 @@
+const sectionRef=document.getElementById("video2"),onEntry=(e,o)=>{e.forEach((e=>{e.isIntersecting?sectionRef.play():sectionRef.pause()}))},option={rootMargin:"50px"},io=new IntersectionObserver(onEntry,option);io.observe(sectionRef);
