@@ -1,0 +1,146 @@
+.seventh {
+  padding: 60px 0 40px;
+
+  @include for-size(desktop) {
+    padding: 0;
+  }
+
+  &__card-body {
+    padding: 0;
+
+    @include for-size(desktop) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.seventh__row {
+  @include for-size(desktop) {
+    align-items: center;
+  }
+}
+
+.seventh__col-md-8 {
+  @include for-size(desktop) {
+    width: 448px;
+  }
+}
+
+.seventh__col-md-4 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.seventh__col-md-4-desktop {
+  display: none;
+  @include for-size(desktop) {
+    display: block;
+    width: 692px;
+  }
+}
+
+.seventh__card {
+  border: none;
+
+  &-title {
+    margin-bottom: 32px;
+
+    font-family: Muller;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+
+    text-align: start;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      margin-bottom: 40px;
+      font-size: 38px;
+    }
+  }
+
+  &-title--part {
+    font-weight: 900;
+    color: #319a9f;
+  }
+
+  &-btn {
+    width: 100%;
+    padding: 14px 28px !important;
+    margin-bottom: 16px;
+
+    font-family: Muller;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+    background-color: #66DBE1!important;
+    border-radius: 10px;
+
+    @include for-size(desktop) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &-btn:focus,
+  &-btn:hover,
+  &-btn:active {
+    background-color: #F9736A!important;
+    color: #ffffff;
+  }
+
+  &-connect {
+    margin-bottom: 4px;
+    font-family: Muller;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+
+    text-align: center;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      font-size: 20px;
+    }
+  }
+
+  &-connect-count {
+    margin-bottom: 0 !important;
+    font-family: Muller;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.3;
+
+    text-align: center;
+
+    color: #319a9f;
+
+    @include for-size(desktop) {
+      font-size: 24px;
+    }
+  }
+}
+
+.seventh__img {
+  width: 100%;
+
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.seventh__img-desktop {
+  display: none;
+
+  @include for-size(desktop) {
+    display: block;
+    width: 100%;
+  }
+}

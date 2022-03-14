@@ -1,0 +1,249 @@
+.hero-bg {
+  min-width: 100%;
+  padding: 28px 0 60px;
+
+  background-image: url("../../img/main/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include for-size(tablet) {
+    padding: 145px 15px 120px;
+  }
+
+  @include for-size(desktop) {
+    max-height: 761px;
+    padding: 145px 15px 120px;
+    background-image: url("../../img/main/bg-desktop.jpg");
+    background-size: 100% 90%;
+  }
+}
+
+.hero-flex {
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  @include for-size(tablet) {
+    max-width: 729px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.hero__title {
+  margin-bottom: 28px;
+  // display: none;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+
+  color: #ffffff;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  &--part {
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #66dbe1;
+
+    @include for-size(tablet) {
+      font-size: 48px;
+      font-weight: 900;
+    }
+  }
+}
+
+.hero__title-desktop {
+  display: none;
+
+  @include for-size(tablet) {
+    display: block;
+    margin-bottom: 64px;
+
+    font-family: Muller;
+    font-style: normal;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 48px;
+
+    color: #ffffff;
+  }
+}
+
+.hero__video-container {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.hero__video {
+  width: 100%;
+  min-height: 170px;
+
+  @include for-size(tablet) {
+    max-width: 729px;
+  }
+}
+
+.hero__text {
+  margin-bottom: 20px;
+
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  @include for-size(tablet) {
+    max-width: 709px;
+    margin-bottom: 54px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+
+    text-align: center;
+  }
+
+  &--part {
+    font-weight: 700;
+    color: #66dbe1;
+
+    @include for-size(tablet) {
+      font-weight: 500;
+    }
+  }
+}
+
+// form
+
+.form-section {
+  @include for-size(tablet) {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-size(desktop) {
+    max-width: 372px;
+    padding: 0;
+  }
+}
+
+.form {
+  padding: 32px 24px;
+
+  background: #ffffff;
+
+  @include for-size(tablet) {
+    max-width: 408px;
+    padding: 55px 46px 56px;
+
+    background: #ffffff;
+    box-shadow: 10px 2px 20px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #000000;
+
+    @include for-size(tablet) {
+      color: #ffffff;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 17px 11px;
+    margin-top: 30px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #212121;
+
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      #66dbe1;
+    border-radius: 10px;
+  }
+
+  &__btn:focus,
+  &__btn:hover,
+  &__btn:active {
+    background-color: #F9736A;
+    color: #ffffff;
+  }
+}
+
+.input_wrapper {
+  & input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.27);
+    border: 1px solid #9096a2;
+    // border-radius: 4px;
+
+    @include for-size(tablet) {
+      border: 1px solid #9096a2;
+      padding: 13px 14px;
+    }
+  }
+
+  & input:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  & input::placeholder {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.3;
+
+    color: #9096a2;
+
+    @include for-size(tablet) {
+      color: #9096a2;
+    }
+  }
+}
+
+.iti__flag-container {
+  @include for-size(tablet) {
+    background: #e3e3e3;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+
+form input.err:focus,
+form input.err {
+  margin-bottom: 0 !important;
+}

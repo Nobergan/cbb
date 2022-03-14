@@ -1,0 +1,51 @@
+.modal-header {
+  border: none;
+  padding: 20px 34px;
+}
+
+.modal-content {
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.modal-dialog {
+  max-width: 353px;
+  padding: 0 15px;
+}
+
+.modal-body {
+  padding: 0 30px 40px;
+
+  &__text {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+
+    &:first-of-type {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.fa-exclamation-circle {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #eb5757;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 20px;
+  }
+}
+
+.btn-close {
+  background-size: 1.3em auto;
+  opacity: 0.8;
+}

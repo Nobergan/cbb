@@ -1,0 +1,114 @@
+.third {
+  margin: 60px 0;
+
+  @include for-size(desktop) {
+    margin: 120px 0;
+  }
+
+  &__card-body {
+    padding: 0;
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1;
+
+    color: #66dbe1;
+
+    @include for-size(desktop) {
+      margin-bottom: 32px;
+      font-size: 38px;
+    }
+  }
+
+  &__card-text-1 {
+    margin-bottom: 20px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.32;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__card-text-1--part {
+    font-weight: 900;
+    color: #319a9f;
+  }
+
+  &__card-text-2 {
+    margin-bottom: 12px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+  }
+
+  &__card-text-3 {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__card-text-3--part {
+    font-weight: 700;
+    color: #319a9f;
+  }
+}
+
+.card-text:last-child {
+  margin-bottom: 32px;
+}
+
+.third__card {
+  border: none;
+}
+
+@include for-size(desktop) {
+  .third__row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .third__col-md-8 {
+    width: 460px;
+    height: 347px;
+  }
+
+  .third__col-md-4 {
+    width: 670px;
+  }
+}
+
+.third__img {
+  width: 100%;
+}

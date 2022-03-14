@@ -1,0 +1,109 @@
+.fourth {
+  padding: 60px 0;
+
+  background-image: url("../../img/fourth/fourth-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include for-size(tablet) {
+    padding: 120px 0;
+
+    background-image: url("../../img/fourth/fourth-bg-desktop.png");
+  }
+
+  &__title {
+    margin-bottom: 78px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    text-shadow: 0px 4px 12px #000000, -13px 0px 22px #000000;
+
+    @include for-size(desktop) {
+      margin-bottom: 59px;
+      font-size: 38px;
+    }
+  }
+
+  &__col {
+    width: 288px;
+    height: 234px;
+    padding: 40px 41px;
+    margin-top: 20px;
+    background: rgba(49, 154, 159, 0.74);
+    backdrop-filter: blur(31px);
+    border-radius: 0px;
+
+    @include for-size(tablet) {
+      margin-right: 10px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 10px;
+      width: 278px;
+      height: 278px;
+      padding: 62px 40px;
+    }
+  }
+}
+
+.row {
+  justify-content: center;
+
+  @include for-size(desktop) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.fourth__card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  border: none;
+
+  @include for-size(desktop) {
+    text-align: start;
+    align-items: flex-start;
+  }
+
+  &-body {
+    padding: 0;
+  }
+
+  &-img {
+    width: 56px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    margin-bottom: 16px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+
+    color: #ffffff;
+  }
+
+  &-text {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: #ffffff;
+  }
+}

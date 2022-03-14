@@ -1,0 +1,166 @@
+<?php
+	$FacebookPixel = $_GET['p'];
+	$Ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$http_lang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+	$fd = fopen("../logs.txt", 'a+');
+	$date = date('d.m.Y, H:i:s');
+	$arr = $date.'|'.$_SERVER['HTTP_CF_IPCOUNTRY'].'|'.$http_lang.'|'.$_SERVER['HTTP_REFERER'].'|'.$_SERVER['HTTP_USER_AGENT'].'|'.$Ip."|land \r\n";
+	fwrite($fd, $arr);
+	fclose($fd);
+  $page_lang = "ru";
+?>
+<!DOCTYPE html>
+<!-- <html lang="<?php echo $page_lang; ?>"> -->
+<html lang="ru">
+<!-- <html lang="ru"> -->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://usahomerelief.net/adict/intlTelInput.css">
+	<link rel="stylesheet" href="https://usahomerelief.net/adict/adict.css">
+	<!-- <link rel="stylesheet" href="./flag-icon.min.css">
+	<link rel="stylesheet" href="./flag-icon.css"> -->
+	<title>Crypto Bank Breaker</title>
+</head>
+
+<body class="page">
+	<%= _.template(require("./templates/header.html"))(data)
+			%>
+	<%= _.template(require("./templates/main.html"))(data)
+				%>
+	<%= _.template(require("./templates/second.html"))(data)
+					%>
+	<%= _.template(require("./templates/third.html"))(data)
+						%>
+	<%= _.template(require("./templates/fourth.html"))(data)
+							%>
+	<%= _.template(require("./templates/fifth.html"))(data)
+								%>
+	<%= _.template(require("./templates/sixth.html"))(data)
+									%>
+	<%= _.template(require("./templates/seventh.html"))(data)
+										%>
+	<%= _.template(require("./templates/footer.html"))(data)
+											%>
+
+	<script src="./assets/js/jquery-3.5.1.min.js"></script>
+	<script src="./assets/js/intlTelInput.js"></script>
+	<script src="./assets/js/adict.js"></script>
+	<script src="./assets/js/utils.js"></script>
+	<script src="./assets/js/video.js"></script>
+	<script src="./assets/js/io.js"></script>
+	<script>
+		$(".scroll-btn").each(function () {
+			$(this).click((e) => {
+				e.preventDefault();
+				$("html").animate(
+					{
+						scrollTop: $("#form").offset().top
+					},
+					800
+				);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		const ids = [
+			"loading1",
+			"loading2",
+			"loading3",
+			"loading4",
+			// "myProgress",
+			// "loader",
+			// "qualify",
+			"second-res",]
+
+		function fade({ delay1 = 500, fadeIn = 500, fadeOut = 500, delay2 = 500, index = 0 }) {
+			if (ids[index]) {
+
+				const block = $(`#${ids[index]}`).delay(delay1).fadeIn(fadeIn).delay(delay2);
+				if (index < ids.length - 1) {
+					block.fadeOut(fadeOut)
+					const timeoutDelay = delay1 + fadeIn + fadeOut + delay2
+					setTimeout(() => {
+						fade({ index: index + 1 })
+
+					}, timeoutDelay)
+				}
+			}
+		}
+		$("#second__btn").click(function () {
+
+			move();
+			fade({})
+
+			// $("#loading1").delay(500).fadeIn(500).delay(1500).fadeOut(500);
+			// $("#loading2").delay(3000).fadeIn(500).delay(1500).fadeOut(500);
+			// $("#loading3").delay(5500).fadeIn(500).delay(1500).fadeOut(500);
+			// $("#loading4").delay(8000).fadeIn(500).delay(1500).fadeOut(500);
+			// // $("#loading5").delay(10500).fadeIn(500).delay(1500).fadeOut(500);
+			// // $("#loading6").delay(13000).fadeIn(500).delay(1500).fadeOut(500);
+			// $("#myProgress").delay(16000).fadeOut(500);
+			// $("#loader").delay(16000).fadeOut(500);
+			// $("#qualify").delay(16500).fadeIn(500);
+			// // $("#second-res").delay(11000).fadeIn(500);
+		});
+
+		var i = 0;
+		function move() {
+
+			document.getElementById("second").style.display = "none";
+			document.getElementById("result-field").style.display = "block";
+			document.getElementById("myProgress").style.display = "block";
+			document.getElementById("loader").style.display = "block";
+			if (i == 0) {
+				i = 1;
+				var elem = document.getElementById("myBar");
+				var width = 1;
+				var id = setInterval(frame, 150);
+				function frame() {
+					if (width >= 100) {
+						clearInterval(id);
+						i = 0;
+					} else {
+						width++;
+						elem.style.width = width + "%";
+					}
+				}
+			}
+		}
+
+		// setTimeout(function remove() {
+		// 	document.getElementById("result-field").style.display = "none";
+		// 	document.getElementById("loader").style.display = "none";
+		// }, 11000)
+
+	</script>
+
+	<script>
+		function getRandomNum(min, max) {
+			const resContainer = document.querySelector('.err-block__result');
+			const num = Math.floor((Math.random() * max) + min);
+			const res = resContainer.textContent = num;
+			return res;
+		}
+
+		getRandomNum(1, 600);
+	</script>
+
+	<script>
+		function getRandomNum(min, max) {
+			const resContainer = document.querySelector('.second-res__earn');
+			const num = Math.floor((Math.random() * max) + min);
+			const res = resContainer.textContent = `€${num}`;
+			return res;
+		}
+
+		getRandomNum(1000, 2000);
+	</script>
+</body>
+
+</html>

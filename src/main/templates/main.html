@@ -1,0 +1,68 @@
+<div class="hero-bg">
+	<!-- <div class="container"> -->
+	<div class="hero-flex container">
+		<!-- Баннер -->
+		<section class="hero">
+			<!-- <div class="container"> -->
+			<h1 class="hero__title">
+				Зарабатывайте <span class="hero__title--part">от €370 в день</span> на ошибках европейских банков
+			</h1>
+			<h1 class="hero__title-desktop">
+				Зарабатывайте <span class="hero__title--part">от €370 в день</span><br> на ошибках европейских<br>
+				банков
+			</h1>
+			<div class="hero__video-container">
+				<video id="video" autoplay controls src="https://wtcprojects.com/video/cbb/1.mp4" loop preload="auto"
+					class="hero__video"></video>
+			</div>
+
+			<!-- </div> -->
+		</section>
+
+		<!-- Форма -->
+		<section class="form-section" id="form">
+			<p class="hero__text"><span class="hero__text--part">Crypto Bank Breaker</span> — это алгоритм поиска
+				уязвимостей в банковских системах. Получите <span class="hero__text--part">доступ сейчас и зарабатывайте
+					без
+					рисков</span>
+			</p>
+			<!-- <div class="container"> -->
+			<form method="POST" action="thanks/index.php" class="form" name="application">
+				<!-- <h3 class="form__title">Заполните форму прямо сейчас!</h3> -->
+				<div class="input_wrapper">
+					<div>
+						<input name="f_name" placeholder="Ваше имя" />
+					</div>
+					<div>
+						<input name="l_name" placeholder="Ваша фамилия" />
+					</div>
+					<div>
+						<input type="email" name="email" placeholder="Ваш e-mail" />
+					</div>
+					<style>
+						.iti__flag-container {
+							z-index: 50;
+						}
+
+						.iti-mobile .iti__country-list {
+							width: 85%;
+						}
+					</style>
+					<input type="tel" name="phone" placeholder="Ваш номер телефона" autocomplete="off" required />
+					<input type="hidden" name="phone2" class="phone2" autocomplete="off" required />
+					<!-- Use variable from gep parameter @ first line - from php code in top of file -->
+					<input type="hidden" name="pixel_id" value="<?php echo $FacebookPixel?>" />
+					<input type="hidden" name="page_lang" value="<?php echo $page_lang?>" />
+					<input type="hidden" name="query" value="<?php echo $QUERY?>" />
+					<input type="hidden" name="gp_id" value="<?php echo $gp?>" />
+					<input type="hidden" name="hs_id" value="<?php echo $hs?>" />
+					<!-- change to actual name of Landing. Name with uppercased letters -->
+					<input type="hidden" name="landing" value="CBB" />
+					<button class="form__btn" type="submit">Зарегистрироваться</button>
+				</div>
+			</form>
+			<!-- </div> -->
+		</section>
+	</div>
+	<!-- </div> -->
+</div>

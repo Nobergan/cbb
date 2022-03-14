@@ -1,0 +1,51 @@
+.footer {
+  padding: 10px 0;
+
+  @include for-size(desktop) {
+      background: #319A9F;
+    }
+
+  &__copy {
+    width: 148px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.3;
+
+    text-align: left;
+
+    color: #000000;
+
+    @include for-size(desktop) {
+      width: unset;
+      font-size: 20px;
+    }
+  }
+
+  &__rights {
+    width: 87px;
+
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.3;
+
+    text-align: right;
+
+    color: #319A9F;
+
+    @include for-size(desktop) {
+      width: unset;
+      font-size: 20px;
+      color: #000000;
+    }
+  }
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
